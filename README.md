@@ -66,11 +66,3 @@ The main decisions made while resolving ambiguous requirements are listed below:
 9. **Accessible dialogs built with Radix UI (`@radix-ui/react-dialog`)** instead of the complete shadcn/ui CLI: this uses the same Radix foundation without requiring an interactive installer. Visual components such as `Input`, `Button`, and `Tag` were implemented directly using the project's design tokens.
 10. **Transaction pagination**: transactions are displayed 10 items per page through `transactions(page, perPage)`. The `Pagination` component shows an “X to Y | Z results” counter.
 11. **JWT expiration**: tokens expire after seven days. When a token expires, the API returns `UNAUTHENTICATED`, and the frontend automatically clears the session and redirects the user to the Login page through Apollo's `onError` link.
-
-## Optional enhancements
-
-Optional features such as real avatar uploads were not implemented on `main` because they are outside the required scope. The avatar displayed on the Profile page uses the user's initials.
-
-## Known limitations
-
-- Visual fidelity was implemented using the project's color, typography, and icon tokens, along with the functional description of each screen. An automated pixel-by-pixel browser comparison was not possible in this environment. A manual visual review against the Figma frames is recommended before final delivery.
